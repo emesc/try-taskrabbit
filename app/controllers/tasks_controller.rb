@@ -27,7 +27,7 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      redirect_to edit_task_path(@task), notice, "Task successfully updated."
+      redirect_to @task, notice: "Task successfully updated."
     else
       render 'edit'
     end
